@@ -32,13 +32,13 @@ namespace DzielenieLiczbApp
             }
             catch (DivideByZeroException ex)
             {
-                // Dodaj błąd do dziennika zdarzeń systemu Windows
+                
                 System.Diagnostics.EventLog.WriteEntry("Application", ex.Message, System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Wystąpił błąd podczas dzielenia przez zero.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                // Dodaj ogólny błąd do dziennika zdarzeń systemu Windows
+                
                 System.Diagnostics.EventLog.WriteEntry("Application", ex.Message, System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Wystąpił nieoczekiwany błąd.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
